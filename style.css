@@ -1,0 +1,176 @@
+html,
+body {
+  background-color: #ede4e5;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  font-family: Righteous;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  z-index: 10px;
+}
+
+h3 {
+  font-size: 44px;
+  letter-spacing: 5px;
+}
+
+.play-box {
+  display: flex;
+  margin: 0 auto;
+}
+
+.guess-and-answer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 0;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  display: flex;
+  border: 0px;
+  height: 60px;
+  width: 60px;
+  font-size: 32px;
+  line-height: 66px;
+  text-align: center;
+}
+
+input:focus-visible {
+  outline: none;
+  caret-shape: underscore;
+}
+
+.ans-screen {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 272px;
+  height: 60px;
+  font-size: 54px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 14px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 156px;
+  margin-left: 70px;
+  gap: 30px;
+}
+
+button {
+  height: 40px;
+  border-radius: 16px;
+  font-size: 20px;
+  background-color: #f1c8b4;
+  font-family: "PT Sans Caption";
+}
+
+#submit {
+  width: 108px;
+}
+
+#show-ans {
+  width: 166px;
+}
+
+#try-again {
+  margin-top: 50px;
+  width: 124px;
+}
+
+/* 背景色塊 */
+.graphic-decotation {
+  z-index: -100px;
+}
+
+.circle_b2 {
+  /*   綠色 */
+  /*   position: relative; */
+  width: 500px;
+  height: 500px;
+  transform: rotate(45deg);
+  right: -260px;
+  bottom: 150px;
+  background-color: #bfd3d1;
+  border-radius: 45px;
+}
+
+.circle_b3 {
+  /*   粉色 */
+  width: 150px;
+  height: 150px;
+  transform: rotate(45deg);
+  right: 300px;
+  bottom: 220px;
+  background-color: #fac3be;
+  border-radius: 30px;
+}
+
+.circle_b4 {
+  /*   褐色 */
+  width: 120px;
+  height: 120px;
+  transform: rotate(45deg);
+  left: -80px;
+  bottom: 120px;
+  background-color: #f0f0e5;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 550px) {
+  h3 {
+    width: 375px;
+    font-size: 44px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .play-box {
+    flex-direction: column;
+  }
+
+  .guess-and-answer {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  input {
+    display: flex;
+    border: none;
+    height: 50px;
+    width: 50px;
+  }
+
+  .buttons {
+    margin: 5px auto;
+    font-size: 14px;
+  }
+
+  #show-ans {
+    margin-top: 10px;
+    width: 180px;
+  }
+
+  .game-over {
+    margin-top: -77px;
+  }
+}
