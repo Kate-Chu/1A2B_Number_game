@@ -181,14 +181,14 @@ i {
   cursor: pointer;
 }
 
-/* 背景色塊 */
+/* graphic */
 .graphic-decotation {
   display: flex;
   position: relative;
 }
 
 .circle_b2 {
-  /*   綠色 */
+  /*   green */
   position: relative;
   width: 500px;
   height: 500px;
@@ -201,7 +201,7 @@ i {
 }
 
 .circle_b3 {
-  /*   粉色 */
+  /*   pink */
   position: relative;
   width: 150px;
   height: 150px;
@@ -214,7 +214,7 @@ i {
 }
 
 .circle_b4 {
-  /*   褐色 */
+  /*   light-yellow */
   position: relative;
   width: 100px;
   height: 100px;
