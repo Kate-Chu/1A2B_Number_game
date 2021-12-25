@@ -34,23 +34,26 @@
       <div class="buttons">
         <button id="submit">Submit</button>
         <button id="show-ans">Show Answer</button>
-        <div class="hint-box">
-          <a href="javascript:void(0);" onclick="js_method()" class="rule">
+        <div class="help-box">
+          <a href="javascript:void(0);" class="rule">
             <i class="rule-icon fas fa-question-circle"></i>
             <div>
-              <div class="display-rule-text">Rule</div>
-              <div class="rule-text-wrapper">
-                <p class="rule-text">
-                  A = Correct number and index<br>
-                  A = 數字及位置都正確<br>
-                  B = Correct number while incorrect index<br>
-                  B = 數字正確，位置不正確</p>
+              <!-- Trigger/Open The Modal -->
+              <div class="display-rule-text" id="ruleBtn">Rule</div>
+
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p class="rule-text">
+                    A = Correct number and index<br>
+                    A = 數字及位置都正確<br>
+                    B = Correct number while incorrect index<br>
+                    B = 數字正確，位置不正確</p>
+                </div>
               </div>
             </div>
-          </a>
-          <a href="javascript:void(0);" onclick="js_method()" class="hint">
-            <i class="hint-icon far fa-lightbulb"></i>
-            <div>Hint</div>
           </a>
         </div>
       </div>
@@ -65,8 +68,6 @@
     <div class="circle circle_b3"></div>
     <div class="circle circle_b4"></div>
   </div>
-
-
   <script src="4A0B.js" type="text/javascript"></script>
 </body>
 

@@ -6,6 +6,9 @@ const showAns = document.querySelector("#show-ans");
 const newGame = document.querySelector("#new-game");
 const rule = document.querySelector(".rule")
 const ruleText = document.querySelector("rule-text")
+const modal = document.querySelector("#myModal");
+const btn = document.querySelector("#ruleBtn");
+const close = document.getElementsByClassName("close")[0];
 let corA
 let corB
 let guessCorrection = ''
@@ -31,7 +34,7 @@ const getCorrectA = () => {
   return corA
 }
 
-// Examine if the number is correct whether in the wrong index 
+// Examine if the correct number but incorrect index
 // 比對Ｂ值（數字正確，位置不正確）
 const getCorrectB = () => {
   let guess = Array.from(guessInput.value, Number)
@@ -56,10 +59,6 @@ const getCorrectB = () => {
 }
 
 generateNewAnswer()
-
-rule.addEventListener('click', e => {
-  ruleText.style.display = 'inline-block'
-})
 
 submit.addEventListener('click', (e) => {
   getCorrectA();
@@ -101,22 +100,17 @@ newGame.addEventListener('click', (e) => {
   return ansScreen.innerText = guessCorrection
 })
 
-
-// Modal part
-const modal = document.getElementById("myModal");
-const btn = document.getElementById("ruleBtn");
-const close = document.getElementsByClassName("close")[0];
-
-btn.onclick = function () {
-  modal.style.display = "block";
+// Modal
+btn.onclick = () => {
+  modal.style.display = "block"
 }
 
-close.onclick = function () {
-  modal.style.display = "none";
+close.onclick = () => {
+  modal.style.display = "none"
 }
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+window.onclick = e => {
+  if (e.target == modal) {
+    modal.style.display = "none"
   }
 }
