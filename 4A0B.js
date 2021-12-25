@@ -16,8 +16,10 @@ let guessCorrection = ''
 // Generate answer randomly 
 // 隨機指派正確答案
 const generateNewAnswer = () => {
+  let numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   for (let i = 0; i < 4; i++) {
-    answer[i] = Math.floor(Math.random() * 10);
+    answer[i] = numArr[Math.floor(Math.random() * numArr.length)]
+    numArr.splice(numArr.indexOf(answer[i]), 1)
   }
 }
 
@@ -39,19 +41,11 @@ const getCorrectA = () => {
 const getCorrectB = () => {
   let guess = Array.from(guessInput.value, Number)
   corB = 0
-  for (let i = 0; i < 4; i++) {
-    if (answer[i] === guess[i]) {
-      answer.slice(i, 1)
-      guess.slice(i, 1)
+  for (let guessNum of guess) {
+    if (answer.indexOf(guessNum) !== -1) {
+      corB += 1
     }
   }
-  answer.forEach(function (ansNum) {
-    guess.forEach(function (guessNum) {
-      if (guessNum === ansNum) {
-        corB += 1;
-      }
-    });
-  });
   if (corA > 0) {
     corB -= corA
   }
@@ -64,26 +58,26 @@ submit.addEventListener('click', (e) => {
   getCorrectA();
   getCorrectB();
   guessCorrection = `${corA}A${corB}B`
-
   if (guessInput.value.toString('') === answer.join('')) {
     submit.disabled = true;
     return ansScreen.innerText = 'U WIN!'
   }
-
   return ansScreen.innerText = guessCorrection
 })
 
-guessInput.addEventListener('', e => {
-  getCorrectA();
-  getCorrectB();
-  guessCorrection = `${corA}A${corB}B`
+guessInput.addEventListener('keydown', e => {
+  if (e.key === "Enter") {
+    e.preventDefault()
+    getCorrectA();
+    getCorrectB();
+    guessCorrection = `${corA}A${corB}B`
+    if (guessInput.value.toString('') === answer.join('')) {
+      submit.disabled = true;
+      return ansScreen.innerText = 'U WIN!'
+    }
 
-  if (guessInput.value.toString('') === answer.join('')) {
-    submit.disabled = true;
-    return ansScreen.innerText = 'U WIN!'
+    return ansScreen.innerText = guessCorrection
   }
-
-  return ansScreen.innerText = guessCorrection
 })
 
 
