@@ -1,4 +1,3 @@
-const answer = [];
 const guessInput = document.querySelector("#guessInput");
 const submit = document.querySelector("#submit");
 const ansScreen = document.querySelector(".ans-screen");
@@ -9,6 +8,8 @@ const ruleText = document.querySelector("rule-text")
 const modal = document.querySelector("#myModal");
 const btn = document.querySelector("#ruleBtn");
 const close = document.getElementsByClassName("close")[0];
+const answer = [];
+
 let corA
 let corB
 let guessCorrection = ''
