@@ -4,7 +4,7 @@
 
 
 ![image](https://github.com/Kate-Chu/4A0B-Number-Game/blob/main/demo.gif)
-<h2><a href="https://kate-chu.github.io/4A0B-Number-Game/">Live Demo</a></h2>
+<h2><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/">Live Demo</a></h2>
 
 <h2>Description</h2>
 <p>Try to reproduce the classical game Bulls and Cows I've played in my childhood. A little animation when submit correct and incorrect guess.</p>
