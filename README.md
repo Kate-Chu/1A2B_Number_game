@@ -4,14 +4,13 @@
 
 
 ![image](https://github.com/Kate-Chu/Bulls-and-Cows-number-game/blob/main/demo.gif)
-<h2><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/" target="_blank">Live Demo</a></h2>
+<h3><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/" target="_blank">Static Webpage</a></h3>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>Try to reproduce the classical game Bulls and Cows I've played in my childhood. A little animation when submit correct and incorrect guess.</p>
 
-<h2>How to Play</h2>
+<h3>How to Play</h3>
 <p>Players guess 4 different numbers. If the matching digits are in the right positions, it returns A. If in different positions, it returns B. The goal is 4A0B.
 
-<h2>About this project</h2>
-<p>HTML / CSS / JavaScript / RWD</p>
-
+<h3>Others</h3>
+<p><a href="https://medium.com/@amber.fragments?p=c6dba55f2177">some chat about this project</a></p>
