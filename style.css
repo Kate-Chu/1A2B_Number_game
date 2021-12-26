@@ -255,8 +255,7 @@ i {
 }
 
 @keyframes correct-pink {
-  0%{bottom: -20px;}  2%{bottom: -7px;}  4%{bottom: 6px;}  6%{bottom: 19px;}
-  8%{bottom: 32px;}  10%{bottom: 45px;}  12%{bottom: 58px;}  14%{bottom: 71px;}  16%{bottom: 84px; right:18%;}  18%{bottom: 97px;}  20%{bottom: 110px;}  22%{bottom: 123px;}  24%{bottom: 136px;}  26%{bottom: 149px;}  28%{bottom: 152px;}  30%{bottom: 165px;}  32%{bottom: 178px;}  34%{bottom: 191px;}  36%{bottom: 204px;}  38%{bottom: 217px;}  40%{right:13%; bottom: 230px;}  42%{bottom: 243px;}  44%{bottom: 256px;}  46%{bottom: 269px;}  48%{bottom: 282px;}  50%{bottom: 295px;}  52%{bottom: 308px;}  54%{bottom: 321px;}  56%{right:14%; bottom: 334px;}  58%{bottom: 347px;}  60%{bottom: 360px;}  70%{background-color: #f9cfcb; bottom: 360px;}  80%{background-color: #fadabe; bottom: 360px;}  90%{background-color: #fae8be; bottom: 360px;}  100%{background-color: #faf0be; bottom: 360px;}
+  0%{bottom: -20px;}  2%{bottom: -7px;}  4%{bottom: 6px;}  6%{bottom: 19px;}  8%{bottom: 32px;}  10%{bottom: 45px;}  12%{bottom: 58px;}  14%{bottom: 71px;}  16%{bottom: 84px; right:18%;}  18%{bottom: 97px;}  20%{bottom: 110px;}  22%{bottom: 123px;}  24%{bottom: 136px;}  26%{bottom: 149px;}  28%{bottom: 152px;}  30%{bottom: 165px;}  32%{bottom: 178px;}  34%{bottom: 191px;}  36%{bottom: 204px;}  38%{bottom: 217px;}  40%{right:13%; bottom: 230px;}  42%{bottom: 243px;}  44%{bottom: 256px;}  46%{bottom: 269px;}  48%{bottom: 282px;}  50%{bottom: 295px;}  52%{bottom: 308px;}  54%{bottom: 321px;}  56%{right:14%; bottom: 334px;}  58%{bottom: 347px;}  60%{bottom: 360px;}  70%{background-color: #f9cfcb; bottom: 360px;}  80%{background-color: #fadabe; bottom: 360px;}  90%{background-color: #fae8be; bottom: 360px;}  100%{background-color: #faf0be; bottom: 360px;}
 }
 
 @media screen and (max-width: 550px) {
