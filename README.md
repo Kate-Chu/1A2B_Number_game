@@ -1,5 +1,8 @@
 # Bulls and Cows
 
+![image](https://github.com/Kate-Chu/Bulls-and-Cows-number-game/blob/main/Bulls%20and%20Cows.png)
+
+
 ![image](https://github.com/Kate-Chu/4A0B-Number-Game/blob/main/demo.gif)
 <h2><a href="https://kate-chu.github.io/4A0B-Number-Game/">Live Demo</a></h2>
 
