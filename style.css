@@ -22,6 +22,7 @@ h3,
 .title,
 .play-box {
   z-index: 20;
+  color:	#3C3C3C;
 }
 
 h3 {
@@ -81,6 +82,7 @@ input:focus-visible {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color:	#3C3C3C;
   height: 156px;
   margin-left: 70px;
   margin-top: 30px;
