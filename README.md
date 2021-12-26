@@ -3,7 +3,7 @@
 ![image](https://github.com/Kate-Chu/Bulls-and-Cows-number-game/blob/main/Bulls%20and%20Cows.png)
 
 
-![image](https://github.com/Kate-Chu/4A0B-Number-Game/blob/main/demo.gif)
+![image](https://github.com/Kate-Chu/Bulls-and-Cows-number-game/blob/main/demo.gif)
 <h2><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/" target="_blank">Live Demo</a></h2>
 
 <h2>Description</h2>
