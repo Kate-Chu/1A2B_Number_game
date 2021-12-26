@@ -8,11 +8,27 @@ const ruleText = document.querySelector("rule-text")
 const modal = document.querySelector("#myModal");
 const btn = document.querySelector("#ruleBtn");
 const close = document.getElementsByClassName("close")[0];
+const pinkCircle = document.querySelector(".circle_b3")
 const answer = [];
 
 let corA
 let corB
 let guessCorrection = ''
+
+// Modal
+btn.onclick = () => {
+  modal.style.display = "block"
+}
+
+close.onclick = () => {
+  modal.style.display = "none"
+}
+
+window.onclick = e => {
+  if (e.target == modal) {
+    modal.style.display = "none"
+  }
+}
 
 // Generate answer randomly 
 // 隨機指派正確答案
@@ -59,8 +75,11 @@ submit.addEventListener('click', (e) => {
   getCorrectA();
   getCorrectB();
   guessCorrection = `${corA}A${corB}B`
+  pinkCircle.classList.add('wrong')
+  pinkCircle.addEventListener('animationend', event => event.target.classList.remove('wrong'), { once: true })
   if (guessInput.value.toString('') === answer.join('')) {
-    submit.disabled = true;
+    pinkCircle.classList.add('correct')
+    submit.disabled = true
     return ansScreen.innerText = 'U WIN!'
   }
   return ansScreen.innerText = guessCorrection
@@ -72,15 +91,16 @@ guessInput.addEventListener('keydown', e => {
     getCorrectA();
     getCorrectB();
     guessCorrection = `${corA}A${corB}B`
+    pinkCircle.classList.add('wrong')
+    pinkCircle.addEventListener('animationend', event => event.target.classList.remove('wrong'), { once: true })
     if (guessInput.value.toString('') === answer.join('')) {
-      submit.disabled = true;
+      pinkCircle.classList.add('correct')
+      submit.disabled = true
       return ansScreen.innerText = 'U WIN!'
     }
-
     return ansScreen.innerText = guessCorrection
   }
 })
-
 
 showAns.addEventListener('click', (e) => {
   submit.disabled = true;
@@ -91,21 +111,9 @@ newGame.addEventListener('click', (e) => {
   submit.disabled = false;
   guessInput.value = ''
   guessCorrection = '0A0B'
+  pinkCircle.style.bottom = "-20px"
+  pinkCircle.classList.remove('correct')
   generateNewAnswer()
   return ansScreen.innerText = guessCorrection
 })
 
-// Modal
-btn.onclick = () => {
-  modal.style.display = "block"
-}
-
-close.onclick = () => {
-  modal.style.display = "none"
-}
-
-window.onclick = e => {
-  if (e.target == modal) {
-    modal.style.display = "none"
-  }
-}

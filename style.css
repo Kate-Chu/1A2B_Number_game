@@ -20,9 +20,8 @@ body {
 
 h3,
 .title,
-.play-box,
-.game-over {
-  z-index: 50;
+.play-box {
+  z-index: 20;
 }
 
 h3 {
@@ -119,6 +118,10 @@ i {
   margin-right: 7px;
 }
 
+.game-over {
+  z-index: 15;
+}
+
 .rule-text-wrapper {
   display: block;
   position: absolute;
@@ -146,7 +149,7 @@ i {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 30;
   left: 0;
   top: 0;
   width: 100%;
@@ -157,7 +160,7 @@ i {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 30% auto;
+  margin: 35% auto;
   padding: 5px 40px;
   border: 1px solid #888;
   border-radius: 15px;
@@ -182,19 +185,19 @@ i {
 }
 
 /* graphic */
-.graphic-decotation {
+.graphic-decoration {
   display: flex;
   position: relative;
 }
 
 .circle_b2 {
   /*   green */
-  position: relative;
+  position: absolute;
   width: 500px;
   height: 500px;
   transform: rotate(45deg);
-  right: 60px;
-  bottom: 200px;
+  left: -90px;
+  bottom: -350px;
   background-color: #bfd3d1;
   border-radius: 45px;
   z-index: 10;
@@ -202,28 +205,58 @@ i {
 
 .circle_b3 {
   /*   pink */
-  position: relative;
+  position: absolute;
   width: 150px;
   height: 150px;
   transform: rotate(45deg);
-  left: 40px;
-  bottom: 140px;
+  right:15%;
+  bottom: -20px;
   background-color: #fac3be;
-  border-radius: 30px;
+  border-radius: 50%;
   z-index: 12;
 }
 
-.circle_b4 {
-  /*   light-yellow */
-  position: relative;
-  width: 100px;
-  height: 100px;
-  transform: rotate(45deg);
-  left: 150px;
-  bottom: 100px;
-  background-color: #f0f0e5;
-  border-radius: 20px;
-  z-index: 14;
+/* Animation */
+.wrong {
+  animation-name: wrong-pink;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
+}
+
+.correct {
+  animation-name: correct-pink;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Wrong answer */
+@keyframes wrong-pink {
+  0%{
+    right:15%;
+    bottom: -20px;
+  }
+  25%{
+    right:17%;
+    bottom: -17px;
+  }
+  50%{
+    right:15%;
+    bottom: -15px;
+  }
+  75%{
+    right:13%;
+    bottom: -17px;
+  }
+  100%{
+    right:15%;
+    bottom: -20px;
+  }
+}
+
+@keyframes correct-pink {
+  0%{bottom: -20px;}  2%{bottom: -7px;}  4%{bottom: 6px;}  6%{bottom: 19px;}
+  8%{bottom: 32px;}  10%{bottom: 45px;}  12%{bottom: 58px;}  14%{bottom: 71px;}  16%{bottom: 84px; right:18%;}  18%{bottom: 97px;}  20%{bottom: 110px;}  22%{bottom: 123px;}  24%{bottom: 136px;}  26%{bottom: 149px;}  28%{bottom: 152px;}  30%{bottom: 165px;}  32%{bottom: 178px;}  34%{bottom: 191px;}  36%{bottom: 204px;}  38%{bottom: 217px;}  40%{right:13%; bottom: 230px;}  42%{bottom: 243px;}  44%{bottom: 256px;}  46%{bottom: 269px;}  48%{bottom: 282px;}  50%{bottom: 295px;}  52%{bottom: 308px;}  54%{bottom: 321px;}  56%{right:14%; bottom: 334px;}  58%{bottom: 347px;}  60%{bottom: 360px;}  70%{background-color: #f9cfcb; bottom: 360px;}  80%{background-color: #fadabe; bottom: 360px;}  90%{background-color: #fae8be; bottom: 360px;}  100%{background-color: #faf0be; bottom: 360px;}
 }
 
 @media screen and (max-width: 550px) {
@@ -264,7 +297,7 @@ i {
   #show-ans {
     margin: 15px auto 0;
     width: 170px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .help-box {
@@ -273,7 +306,7 @@ i {
 
   #new-game {
     margin-top: 8px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .game-over {
@@ -284,4 +317,9 @@ i {
   margin: 50% auto;
   font-size: 18px;
   }
+
+  .circle_b3 {
+  /*   pink */
+  right:10%;
+}
 }
