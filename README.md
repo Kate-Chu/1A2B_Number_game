@@ -11,3 +11,7 @@
 
 <h2>How to Play</h2>
 <p>Players guess 4 different numbers. If the matching digits are in the right positions, it returns A. If in different positions, it returns B. The goal is 4A0B.
+
+<h2>About this project</h2>
+<p>HTML / CSS / JavaScript / RWD</p>
+
