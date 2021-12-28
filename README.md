@@ -14,3 +14,10 @@
 
 <h3>Others</h3>
 <p><a href="https://medium.com/@amber.fragments?p=c6dba55f2177">some chat about this project</a></p>
+
+<h3>Acknowledgements</h3>
+<li>td</li>
+<li>Vincient(勳）</li>
+<li>陳柏如</li>
+<li>xanxusWu</li>
+<li>美儀 MeiYi
