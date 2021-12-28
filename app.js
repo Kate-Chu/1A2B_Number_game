@@ -69,9 +69,9 @@ const getCorrectB = () => {
   return corB
 }
 
-generateNewAnswer()
-
-submit.addEventListener('click', (e) => {
+// after guess submitted
+// 提交答案以後動作
+const afterSubmit = () => {
   getCorrectA();
   getCorrectB();
   guessCorrection = `${corA}A${corB}B`
@@ -82,22 +82,19 @@ submit.addEventListener('click', (e) => {
     submit.disabled = true
     return ansScreen.innerText = 'U WIN!'
   }
+}
+
+generateNewAnswer()
+
+submit.addEventListener('click', (e) => {
+  afterSubmit()
   return ansScreen.innerText = guessCorrection
 })
 
 guessInput.addEventListener('keydown', e => {
   if (e.key === "Enter") {
     e.preventDefault()
-    getCorrectA();
-    getCorrectB();
-    guessCorrection = `${corA}A${corB}B`
-    pinkCircle.classList.add('wrong')
-    pinkCircle.addEventListener('animationend', event => event.target.classList.remove('wrong'), { once: true })
-    if (guessInput.value.toString('') === answer.join('')) {
-      pinkCircle.classList.add('correct')
-      submit.disabled = true
-      return ansScreen.innerText = 'U WIN!'
-    }
+    afterSubmit()
     return ansScreen.innerText = guessCorrection
   }
 })
