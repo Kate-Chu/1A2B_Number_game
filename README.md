@@ -17,7 +17,7 @@
 
 <h3>Acknowledgements</h3>
 <li>td</li>
-<li>Vincient(勳）</li>
+<li>Vincent(勳）</li>
 <li>陳柏如</li>
 <li>xanxusWu</li>
 <li>美儀 MeiYi
