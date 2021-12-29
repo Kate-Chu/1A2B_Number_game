@@ -17,4 +17,5 @@
 <li>Vincent(勳）</li>
 <li>陳柏如</li>
 <li>xanxusWu</li>
-<li>美儀 MeiYi
+<li>美儀 MeiYi</li>
+<li>Jamie Aleman</li>
