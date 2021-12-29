@@ -10,7 +10,7 @@
 <p>Players guess 4 different numbers. If the matching digits are in the right positions, it returns A. If in different positions, it returns B. The goal is 4A0B.
 
 <h3>Others</h3>
-<p><a href="https://medium.com/@amber.fragments?p=c6dba55f2177">Some chat about this project</a>(in Chinese)</p>
+<p><a href="https://medium.com/@amber.fragments?p=c6dba55f2177">Some chat about this project in Chinese).</a>(</p>
 
 <h3>Acknowledgements</h3>
 <li>td</li>
