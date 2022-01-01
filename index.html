@@ -25,7 +25,8 @@
     <div class="play-box">
       <div class="guess-and-answer">
         <form action="" class="guess">
-          <input type="text" class="guessInput" id="guessInput" maxlength="4">
+          <input type="text" class="guessInput" id="guessInput" maxlength="4"
+            onkeyup="this.value=this.value.replace(/[^\d]/,'')">
         </form>
         <div class="display-screen">
           <div class="ans-screen">0A0B</div>
