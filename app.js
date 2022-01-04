@@ -40,41 +40,28 @@ const generateNewAnswer = () => {
   }
 }
 
-// Examine if the number and index are exactly the same with the answer
-// 比對Ａ值（數字與位置皆正確）
-const getCorrectA = () => {
+// compare the guess with the answer
+const getCorrection = () => {
   let guess = Array.from(guessInput.value, Number)
-  corA = 0
+  let corA = 0
+  let corB = 0
   for (let i = 0; i < 4; i++) {
-    if (answer[i] === guess[i]) {
-      corA += 1;
+    const answerIndex = answer.indexOf(guess[i])
+    if (answerIndex === i) {
+      corA++
+    } else if (answerIndex !== -1) {
+      corB++
     }
   }
-  return corA
+  guessCorrection = `${corA}A${corB}B`
+  return guessCorrection
 }
 
-// Examine if the correct number but incorrect index
-// 比對Ｂ值（數字正確，位置不正確）
-const getCorrectB = () => {
-  let guess = Array.from(guessInput.value, Number)
-  corB = 0
-  for (let guessNum of guess) {
-    if (answer.indexOf(guessNum) !== -1) {
-      corB += 1
-    }
-  }
-  if (corA > 0) {
-    corB -= corA
-  }
-  return corB
-}
 
 // after guess submitted
 // 提交答案以後動作
 const afterSubmit = () => {
-  getCorrectA();
-  getCorrectB();
-  guessCorrection = `${corA}A${corB}B`
+  getCorrection();
   pinkCircle.classList.add('wrong')
   pinkCircle.addEventListener('animationend', event => event.target.classList.remove('wrong'), { once: true })
   if (guessInput.value.toString('') === answer.join('')) {
