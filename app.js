@@ -41,6 +41,7 @@ const generateNewAnswer = () => {
 }
 
 // compare the guess with the answer
+//  比對輸入值與答案
 const getCorrection = () => {
   let guess = Array.from(guessInput.value, Number)
   let corA = 0
