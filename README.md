@@ -1,4 +1,4 @@
-# Bulls and Cows
+# Bulls and Cows (1A2B)
 
 ![image](https://github.com/Kate-Chu/Bulls-and-Cows-number-game/blob/main/demo.gif)
 <h3><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/" target="_blank">Static Webpage</a></h3>
