@@ -1,7 +1,7 @@
 # Bulls and Cows (1A2B)
 
 ![image](https://github.com/Kate-Chu/Bulls-and-Cows-number-game/blob/main/demo.gif)
-<h3><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/" target="_blank">Play Game</a></h3>
+<h3><a href="https://kate-chu.github.io/Bulls-and-Cows-number-game/" target="_blank">Here to Play</a></h3>
 
 <h3>Description</h3>
 <p>Try to reproduce the classical game Bulls and Cows I've played in my childhood. A little animation when submit correct and incorrect guess.</p>
